@@ -1,29 +1,29 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Animator), typeof(PlayerHealth))]
-public sealed class PlayerAutoAttack : MonoBehaviour
+[RequireComponent(typeof(Animator), typeof(EnemyHealth))]
+public sealed class EnemyAutoAttack : MonoBehaviour
 {
     private static readonly int AttackHash = Animator.StringToHash("Attack");
 
     [SerializeField]
-    private EnemyHealth target;
+    private PlayerHealth target;
 
     [SerializeField, Min(0.1f)]
-    private float attackInterval = 1.5f;
+    private float attackInterval = 2f;
 
     private Animator animator;
-    private PlayerHealth playerHealth;
+    private EnemyHealth enemyHealth;
     private float attackTimer;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
-        playerHealth = GetComponent<PlayerHealth>();
+        enemyHealth = GetComponent<EnemyHealth>();
     }
 
     private void Update()
     {
-        if (playerHealth.IsDead || target == null || target.IsDead)
+        if (enemyHealth.IsDead || target == null || target.IsDead)
         {
             return;
         }

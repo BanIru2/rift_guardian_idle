@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7611982389749667952}
   - component: {fileID: 1822102245094162130}
   - component: {fileID: 567474563683184315}
+  - component: {fileID: 7926978829941825831}
+  - component: {fileID: 5617455384702447777}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Untagged
@@ -130,3 +132,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   maxHealth: 30
   currentHealth: 0
+--- !u!114 &7926978829941825831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163934040511068426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce844053a3578d343b97dad6be7dd9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GoblinAnimationEvents
+  target: {fileID: 0}
+  attackDamage: 10
+--- !u!114 &5617455384702447777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9163934040511068426}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 314c42161f3c17a4db48a8ca906999f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyAutoAttack
+  target: {fileID: 0}
+  attackInterval: 2
