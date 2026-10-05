@@ -14,6 +14,7 @@ public sealed class EnemyHealth : MonoBehaviour
 
     private Animator animator;
     private bool isDead;
+    public bool IsDead => isDead;
 
     private void Awake()
     {

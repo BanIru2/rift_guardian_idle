@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7973887692546556287}
   - component: {fileID: 8863651936963773239}
   - component: {fileID: 3668415994052540658}
+  - component: {fileID: 7369146946618397900}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -128,3 +129,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66e1f81ff2445649b53a648a53e2213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimationEvents
+  target: {fileID: 0}
+  attackDamage: 10
+--- !u!114 &7369146946618397900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944193629509026722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47eacf6b6404d6041abdb1812377489d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAutoAttack
+  attackInterval: 1.5
