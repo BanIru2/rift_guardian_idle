@@ -1,12 +1,17 @@
 using UnityEngine;
 
+[RequireComponent(typeof(PlayerCombatStats))]
 public sealed class PlayerAnimationEvents : MonoBehaviour
 {
     [SerializeField]
     private EnemyHealth target;
 
-    [SerializeField, Min(1)]
-    private int attackDamage = 10;
+    private PlayerCombatStats combatStats;
+
+    private void Awake()
+    {
+        combatStats = GetComponent<PlayerCombatStats>();
+    }
 
     public void OnAttackHit()
     {
@@ -15,6 +20,6 @@ public sealed class PlayerAnimationEvents : MonoBehaviour
             return;
         }
 
-        target.TakeDamage(attackDamage);
+        target.TakeDamage(combatStats.AttackDamage);
     }
 }

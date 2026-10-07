@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 8863651936963773239}
   - component: {fileID: 3668415994052540658}
   - component: {fileID: 7369146946618397900}
+  - component: {fileID: 1854458928908091839}
+  - component: {fileID: 8320136606548203909}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -143,4 +145,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47eacf6b6404d6041abdb1812377489d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAutoAttack
+  target: {fileID: 0}
   attackInterval: 1.5
+--- !u!114 &1854458928908091839
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944193629509026722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca702c12962e4f74fb43270ab1f86c12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
+  maxHealth: 100
+  currentHealth: 0
+--- !u!114 &8320136606548203909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4944193629509026722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e509675502ef446a9bb30080b1547d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCombatStats
+  attackDamage: 10
+  attackUpgradeLevel: 0
